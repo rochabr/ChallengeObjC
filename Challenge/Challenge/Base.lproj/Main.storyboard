@@ -61,5 +61,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="c3m-Ca-thh">
+            <objects>
+                <viewController id="s9l-fB-UMD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hk1-pD-IV4"/>
+                        <viewControllerLayoutGuide type="bottom" id="IFX-7K-ZTx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eMU-Dt-nzW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QZJ-Wp-Uoi">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Home" id="2zN-7A-8Xa"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bFf-fc-QX7"/>
+                                    <barButtonItem title="Live" id="zx1-ds-11d"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="859-td-g3e"/>
+                                    <barButtonItem title="Me" id="LSX-s4-3MK"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="24w-3Z-egH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1358" y="33"/>
+        </scene>
     </scenes>
 </document>
