@@ -1,0 +1,18 @@
+use_frameworks!
+platform :ios, '8.0'
+
+target 'Challenge' do
+  # [START auth_pod]
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  # [END auth_pod]
+
+  # These are pods used for the auth providers.
+  pod 'FBSDKLoginKit'
+  # [START google_pod]
+  pod 'GoogleSignIn'
+  pod 'GoogleMaps'
+    pod 'GooglePlaces'
+  # [END google_pod]
+  pod 'TwitterKit'
+end
