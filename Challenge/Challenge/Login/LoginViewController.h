@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FDatabase.h"
+
 @import GoogleSignIn;
 
 @interface LoginViewController : UIViewController<GIDSignInUIDelegate>

@@ -18,6 +18,9 @@
 		5B143BE51F279B6500B21F88 /* ChallengeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B143BE41F279B6500B21F88 /* ChallengeUITests.m */; };
 		5B143BF31F279E8A00B21F88 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B143BF21F279E8A00B21F88 /* GoogleService-Info.plist */; };
 		5B143BF61F27A33200B21F88 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B143BF51F27A33200B21F88 /* LoginViewController.m */; };
+		5B3DF8E31F27D3A50035771C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3DF8E21F27D3A50035771C /* User.m */; };
+		5B3DF8EC1F27D9E80035771C /* FDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3DF8EB1F27D9E80035771C /* FDatabase.m */; };
+		5B3DF8EF1F27DFBD0035771C /* Challenge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3DF8EE1F27DFBD0035771C /* Challenge.m */; };
 		8B5A11161D79B67F9E7B9511 /* Pods_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 672F2E9EFBE55BA51852139C /* Pods_Challenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +65,12 @@
 		5B143BF21F279E8A00B21F88 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5B143BF41F27A33200B21F88 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		5B143BF51F27A33200B21F88 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		5B3DF8E11F27D3A50035771C /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		5B3DF8E21F27D3A50035771C /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		5B3DF8EA1F27D9E80035771C /* FDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDatabase.h; sourceTree = "<group>"; };
+		5B3DF8EB1F27D9E80035771C /* FDatabase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDatabase.m; sourceTree = "<group>"; };
+		5B3DF8ED1F27DFBD0035771C /* Challenge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Challenge.h; sourceTree = "<group>"; };
+		5B3DF8EE1F27DFBD0035771C /* Challenge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Challenge.m; sourceTree = "<group>"; };
 		672F2E9EFBE55BA51852139C /* Pods_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF1F431C1F42168BEB6D82D6 /* libPods-ChallengeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChallengeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -117,6 +126,8 @@
 		5B143BBC1F279B6500B21F88 /* Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				5B3DF8E01F27D32E0035771C /* Model */,
+				5B3DF8E41F27D6730035771C /* Firebase */,
 				5B143BFB1F27A48000B21F88 /* Login */,
 				5B143BBD1F279B6500B21F88 /* AppDelegate.h */,
 				5B143BBE1F279B6500B21F88 /* AppDelegate.m */,
@@ -158,6 +169,26 @@
 				5B143BF51F27A33200B21F88 /* LoginViewController.m */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		5B3DF8E01F27D32E0035771C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B3DF8E11F27D3A50035771C /* User.h */,
+				5B3DF8E21F27D3A50035771C /* User.m */,
+				5B3DF8ED1F27DFBD0035771C /* Challenge.h */,
+				5B3DF8EE1F27DFBD0035771C /* Challenge.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5B3DF8E41F27D6730035771C /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				5B3DF8EA1F27D9E80035771C /* FDatabase.h */,
+				5B3DF8EB1F27D9E80035771C /* FDatabase.m */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		9C1B89B791D3A1FAB3EEB41C /* Pods */ = {
@@ -363,7 +394,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B143BC81F279B6500B21F88 /* Challenge.xcdatamodeld in Sources */,
+				5B3DF8EF1F27DFBD0035771C /* Challenge.m in Sources */,
 				5B143BC21F279B6500B21F88 /* ViewController.m in Sources */,
+				5B3DF8EC1F27D9E80035771C /* FDatabase.m in Sources */,
+				5B3DF8E31F27D3A50035771C /* User.m in Sources */,
 				5B143BD01F279B6500B21F88 /* main.m in Sources */,
 				5B143BBF1F279B6500B21F88 /* AppDelegate.m in Sources */,
 				5B143BF61F27A33200B21F88 /* LoginViewController.m in Sources */,

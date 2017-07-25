@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+@class User;
 
 @import FBSDKCoreKit;
 @import FBSDKLoginKit;
@@ -21,9 +22,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
-    [GIDSignIn sharedInstance].delegate = self;
+    //check for signed in user
+    FIRUser *user = [FIRAuth auth].currentUser;
+    if (user){
+        [self handleLogin];
+        //[self navigateToMemoryViewer];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,7 +52,7 @@
                                                   return;
                                               }else{
                                                   NSLog(@"signed in as %@", user.displayName);
-//                                                  [self handleLogin];
+                                                  [self handleLogin];
 //                                                  [self navigateToMemoryViewer];
                                               }
                                           }];
@@ -66,23 +71,20 @@
     self.handle = [[FIRAuth auth]
                    addAuthStateDidChangeListener:^(FIRAuth *_Nonnull auth, FIRUser *_Nullable user) {
                        if (user) {
-//                           [self handleLogin];
+                           [self handleLogin];
 //                           [self navigateToMemoryViewer];
                        }
                    }];
 }
 
-- (void)signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error {
-    // ...
-    if (error == nil) {
-        GIDAuthentication *authentication = user.authentication;
-        FIRAuthCredential *credential =
-        [FIRGoogleAuthProvider credentialWithIDToken:authentication.idToken
-                                         accessToken:authentication.accessToken];
-        // ...
-    } else {
-        // ...
-    }
+
+- (void) handleLogin{
+    User *user = [[User alloc] init];
+    user.name = [FIRAuth auth].currentUser.displayName;
+    user.email = [FIRAuth auth].currentUser.email;
+    user.pictureURL = [FIRAuth auth].currentUser.photoURL.absoluteString;
+    
+    [[FDatabase instance] addOrUpdateUser:user];
 }
 
 - (void)signIn:(GIDSignIn *)signIn didDisconnectWithUser:(GIDGoogleUser *)user withError:(NSError *)error {
