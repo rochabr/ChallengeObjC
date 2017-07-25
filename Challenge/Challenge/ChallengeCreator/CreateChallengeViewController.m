@@ -6,13 +6,13 @@
 //  Copyright © 2017 ropetech. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "CreateChallengeViewController.h"
 
-@interface ViewController ()
+@interface CreateChallengeViewController ()
 
 @end
 
-@implementation ViewController
+@implementation CreateChallengeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
